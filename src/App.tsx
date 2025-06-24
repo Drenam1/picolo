@@ -32,7 +32,15 @@ function App() {
     colorArray[Math.floor(Math.random() * colorArray.length)]
   );
 
+  React.useEffect(() => {
+    const storedPlayers = localStorage.getItem("picolo_players");
+    if (storedPlayers) {
+      setCurrentPlayers(JSON.parse(storedPlayers));
+    }
+  }, []);
+
   function startGame(players: string[], enabledCardTypes: string[]) {
+    localStorage.setItem("picolo_players", JSON.stringify(players));
     if (players.length < 2) {
       alert("You need at least 2 players to start the game.");
       return;

@@ -15,6 +15,12 @@ const PlayersPage: React.FunctionComponent<PlayersPageProps> = ({
     "Categories",
     "Rule",
   ]);
+  React.useEffect(() => {
+    const storedPlayers = localStorage.getItem("picolo_players");
+    if (storedPlayers) {
+      setPlayers(JSON.parse(storedPlayers));
+    }
+  }, []);
 
   return (
     <div className="players-page">
