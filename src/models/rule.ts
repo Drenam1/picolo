@@ -1,5 +1,5 @@
 export interface Rule {
   startString: string;
-  endString?: string;
-  duration?: number;
+  endString: string;
+  duration: number;
 }

@@ -11,12 +11,26 @@ import PlayersPage from "./components/pages/playersPage/playersPage";
 import { Rule } from "./models/rule";
 import StandardCardPage from "./components/pages/cardPages/standardCardPage";
 import UmActuallyPage from "./components/pages/cardPages/umActuallyCardPage";
+import CategoriesPage from "./components/pages/cardPages/categoriesPage";
+import RuleCardPage from "./components/pages/cardPages/ruleCardPage";
 
 function App() {
+  const colorArray = [
+    "#FF5733", // Red
+    "#33FF57", // Green
+    "#3357FF", // Blue
+    "#F1C40F", // Yellow
+    "#8E44AD", // Purple
+    "#E67E22", // Orange
+    "#1ABC9C", // Teal
+  ];
   const [gameStarted, setGameStarted] = React.useState<boolean>(false);
   const [questionList, setQuestionList] = React.useState<Question[]>([]);
   const [currentRules, setCurrentRules] = React.useState<Rule[]>([]);
   const [currentPlayers, setCurrentPlayers] = React.useState<string[]>([]);
+  const [currentColor, setCurrentColor] = React.useState<string>(
+    colorArray[Math.floor(Math.random() * colorArray.length)]
+  );
 
   React.useEffect(() => {
     startGame(["Will", "Steve", "Tanisha"]);
@@ -45,11 +59,32 @@ function App() {
   }
 
   function nextQuestion() {
+    setCurrentRules((prevRules) =>
+      prevRules.map((rule) => ({
+        ...rule,
+        duration: rule.duration - 1,
+      }))
+    );
     setQuestionList((prevQuestions) => {
       const newQuestions = [...prevQuestions];
       newQuestions.shift();
       return newQuestions;
     });
+    const filteredColorArray = colorArray.filter(
+      (color) => color !== currentColor
+    );
+    setCurrentColor(
+      filteredColorArray[Math.floor(Math.random() * filteredColorArray.length)]
+    );
+  }
+
+  function addRule(newRule: Question) {
+    const rule: Rule = {
+      startString: newRule.startString,
+      endString: newRule.endString || "",
+      duration: Math.floor(Math.random() * 6) + 5,
+    };
+    setCurrentRules([...currentRules, rule]);
   }
 
   console.log("Question List:", questionList);
@@ -59,7 +94,7 @@ function App() {
   console.log("Current Question:", currentQuestion);
 
   return (
-    <div className="App">
+    <div className="App" style={{ backgroundColor: currentColor }}>
       {gameStarted ? (
         <>
           {currentQuestion ? (
@@ -76,6 +111,28 @@ function App() {
                   question={currentQuestion}
                   players={currentPlayers}
                   nextQuestion={nextQuestion}
+                />
+              )}
+              {currentQuestion.type === QuestionType.Categories && (
+                <CategoriesPage
+                  question={currentQuestion}
+                  players={currentPlayers}
+                  nextQuestion={nextQuestion}
+                />
+              )}
+              {currentQuestion.type === QuestionType.Categories && (
+                <CategoriesPage
+                  question={currentQuestion}
+                  players={currentPlayers}
+                  nextQuestion={nextQuestion}
+                />
+              )}
+              {currentQuestion.type === QuestionType.Rule && (
+                <RuleCardPage
+                  question={currentQuestion}
+                  players={currentPlayers}
+                  nextQuestion={nextQuestion}
+                  addRule={addRule}
                 />
               )}
             </>
