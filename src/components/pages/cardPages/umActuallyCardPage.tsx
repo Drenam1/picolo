@@ -13,7 +13,7 @@ const UmActuallyCardPage: React.FunctionComponent<UmActuallyCardPageProps> = ({
 }) => {
   const [currentPage, setCurrentPage] = React.useState<number>(0);
   const [punishment] = React.useState<number>(
-    Math.floor(Math.random() * 4) + 2
+    Math.floor(Math.random() * 4) + 4
   );
   const [punisher] = React.useState<string>(
     players[Math.floor(Math.random() * players.length)]

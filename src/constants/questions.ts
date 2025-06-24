@@ -144,6 +144,207 @@ export const standardQuestions: Question[] = [
     type: QuestionType.Standard,
     startString: "Everyone give out {number} drinks.",
   },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Anyone willing to tell the group about their worst date ever can give out {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Who is most likely to wake up in the woods after a night out? The voted person must drink {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Anyone whos second toe is longer than their big toe drinks {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Anyone who has vomited on public transport drinks {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "If your body count is over 20 drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "First person to do 20 pushups can give out {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Anyone wearing glasses drinks {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{person1} must record a 5-second moivational video for {person2} or drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "If you've ever dropped your phone in the toilet, drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{person1}, come up with a name for an erotic fiction novel detail what it's about, or drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{person1}, do your best impression of {person2} or drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "If you've ever shit yourself from drinking too much, drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{person1} and {person2} must slow dance with each other to the next song, regardless of what that song is, or both players must drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Who is the most drunk right now? Vote, and that person drinks 1 and gives out {number}.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{person1} and {person2} has to admit what they like to be called in bed. If they admit it, they can give out {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "{person1} must feed {person2} a piece of food or drink.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "If you've taken someones virginity, drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{person1} must start into {person2}'s eyes without breaking eye contact for 30 seconds or drink {number}.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Waterfall! Starting with {person1} and moving clokwise, everyone drinks until the person before them stops.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{person1}, pick who is the least drunk. That person must finish their drink.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Who has done the most illegal drugs? Vote, and the rock star can give out {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Anyone whos partner is older than them gives out {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{person1} give a personalized compliment to all the players (including yourself) or finish your drink.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{person1} must let {person2} give them a nickname for the rest of the night.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "If you've ever had sex in a pool or hot tub, drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Who is the most positive player? Vote, and Bob Ross can give out {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "If you're wearing fun socks, give out {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Anyone whos name begins with J can choose someone else to finish half their drink.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Anyone drinking water right now has to finish it.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "If you've ever been streaking, drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "If you've ever had sex with someone within 24 hours of meeting them, drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Mix together a cocktail of everone's drinks. {person1} has to drink it.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{person1} must give a lapdance to {person2}. If either person refuses, both must drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{person1}, pick someone to pick someone else that will drink 5 times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "If you've ever used a cringey pickup line online or in real life, share it with the group and drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{person1}, share your body count to give out 12 drinks, or drink {number} yourself.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{person1} must sit on {person2}'s lap for the next 2 rounds, or drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{person1} drinks 8 times. The person to their left drinks 1 less, all the way around until you reach 0.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Anyone holding a drink in their hand must drink {number} times from it.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{person1}, ever done 69 before? If yes, drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Anyone drinking 7% or lower alcohol content beverages, drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Everyone drink {number} from the cup of your choosing.",
+  },
 ];
 
 export const categoryQuestions: Question[] = [
@@ -257,8 +458,20 @@ export const ruleQuestions: Question[] = [
   {
     type: QuestionType.Rule,
     startString:
-      "The youngest player is now called 'Little Baby'. Anyone who calls them by their real name has to drink.",
+      "The player who cries the most when drinking is now called 'Crybaby'. Anyone who calls them by their real name has to drink.",
     endString: "The baby has grown up.",
+  },
+  {
+    type: QuestionType.Rule,
+    startString:
+      "The oldest player is now called 'Grandpa/Grandma'. Anyone who calls them by their real name has to drink.",
+    endString: "The clock has turned back - Grandpa/Grandma is young again.",
+  },
+  {
+    type: QuestionType.Rule,
+    startString:
+      "{person1} is now snake eyes. If you make eye contact with them, you must drink.",
+    endString: "Your eyes have returned to normal.",
   },
 ];
 
