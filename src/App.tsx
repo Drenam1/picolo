@@ -32,10 +32,6 @@ function App() {
     colorArray[Math.floor(Math.random() * colorArray.length)]
   );
 
-  React.useEffect(() => {
-    startGame(["Will", "Steve", "Tanisha"]);
-  }, []);
-
   function startGame(players: string[]) {
     if (players.length < 2) {
       alert("You need at least 2 players to start the game.");
