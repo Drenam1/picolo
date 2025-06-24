@@ -120,13 +120,6 @@ function App() {
                   nextQuestion={nextQuestion}
                 />
               )}
-              {currentQuestion.type === QuestionType.Categories && (
-                <CategoriesPage
-                  question={currentQuestion}
-                  players={currentPlayers}
-                  nextQuestion={nextQuestion}
-                />
-              )}
               {currentQuestion.type === QuestionType.Rule && (
                 <RuleCardPage
                   question={currentQuestion}
