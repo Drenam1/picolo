@@ -1,0 +1,61 @@
+import React from "react";
+import "./playersPage.css";
+
+export interface PlayersPageProps {
+  startGame: (players: string[]) => void;
+}
+
+const PlayersPage: React.FunctionComponent<PlayersPageProps> = ({
+  startGame,
+}) => {
+  const [players, setPlayers] = React.useState<string[]>([]);
+
+  return (
+    <div className="players-page">
+      <h1>List your players</h1>
+      <ul className="players-list">
+        {players.map((player, idx) => (
+          <li key={idx}>
+            <input
+              type="text"
+              value={player}
+              onChange={(e) => {
+                const newPlayers = [...players];
+                newPlayers[idx] = e.target.value;
+                setPlayers(newPlayers);
+              }}
+              placeholder={`Player ${idx + 1} name`}
+            />
+            <button
+              type="button"
+              onClick={() => {
+                setPlayers(players.filter((_, i) => i !== idx));
+              }}
+              aria-label="Remove player"
+            >
+              Remove
+            </button>
+          </li>
+        ))}
+      </ul>
+      <button type="button" onClick={() => setPlayers([...players, ""])}>
+        Add Player
+      </button>
+      {players.filter((player) => !!player).length > 1 && (
+        <button
+          type="button"
+          onClick={() => {
+            // Here you can implement the logic to start the game
+            console.log("Starting game with players:", players);
+            startGame(players.filter((player) => !!player));
+          }}
+          className="start-game-button"
+        >
+          Start Game
+        </button>
+      )}
+    </div>
+  );
+};
+
+export default PlayersPage;
