@@ -19,3 +19,7 @@ ul {
   cursor: default;
   height: 100%;
 }
+
+.boldText {
+  font-weight: bold;
+}

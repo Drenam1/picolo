@@ -75,6 +75,7 @@ function App() {
                 <UmActuallyPage
                   question={currentQuestion}
                   players={currentPlayers}
+                  nextQuestion={nextQuestion}
                 />
               )}
             </>
