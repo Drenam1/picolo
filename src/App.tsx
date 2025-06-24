@@ -32,20 +32,26 @@ function App() {
     colorArray[Math.floor(Math.random() * colorArray.length)]
   );
 
-  function startGame(players: string[]) {
+  function startGame(players: string[], enabledCardTypes: string[]) {
     if (players.length < 2) {
       alert("You need at least 2 players to start the game.");
       return;
     }
     setCurrentPlayers(players);
     setGameStarted(true);
-
-    const questions: Question[] = [
-      ...standardQuestions,
-      ...categoryQuestions,
-      ...ruleQuestions,
-      ...umActuallyQuestions,
-    ];
+    const questions: Question[] = [];
+    if (enabledCardTypes.includes("Standard")) {
+      questions.push(...standardQuestions);
+    }
+    if (enabledCardTypes.includes("UmActually")) {
+      questions.push(...umActuallyQuestions);
+    }
+    if (enabledCardTypes.includes("Categories")) {
+      questions.push(...categoryQuestions);
+    }
+    if (enabledCardTypes.includes("Rule")) {
+      questions.push(...ruleQuestions);
+    }
     // Shuffle the questions array
     for (let i = questions.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -126,7 +132,10 @@ function App() {
               )}
             </>
           ) : (
-            <></>
+            <div className="end-game-message">
+              <h1>Game Over!</h1>
+              <h2>Thanks for playing! Refresh the page to start again!</h2>
+            </div>
           )}
         </>
       ) : (

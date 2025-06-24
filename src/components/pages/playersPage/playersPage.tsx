@@ -2,13 +2,19 @@ import React from "react";
 import "./playersPage.css";
 
 export interface PlayersPageProps {
-  startGame: (players: string[]) => void;
+  startGame: (players: string[], cardTypes: string[]) => void;
 }
 
 const PlayersPage: React.FunctionComponent<PlayersPageProps> = ({
   startGame,
 }) => {
   const [players, setPlayers] = React.useState<string[]>([]);
+  const [enabledCardTypes, setEnabledCardTypes] = React.useState<string[]>([
+    "Standard",
+    "UmActually",
+    "Categories",
+    "Rule",
+  ]);
 
   return (
     <div className="players-page">
@@ -47,13 +53,61 @@ const PlayersPage: React.FunctionComponent<PlayersPageProps> = ({
           onClick={() => {
             // Here you can implement the logic to start the game
             console.log("Starting game with players:", players);
-            startGame(players.filter((player) => !!player));
+            startGame(
+              players.filter((player) => !!player),
+              enabledCardTypes
+            );
           }}
           className="start-game-button"
         >
           Start Game
         </button>
       )}
+      <h2>Select Desired Card Types</h2>
+      <div className="card-types">
+        <label>
+          <input
+            type="checkbox"
+            checked={enabledCardTypes.includes("UmActually")}
+            onChange={(e) => {
+              const newCardTypes = e.target.checked
+                ? [...enabledCardTypes, "UmActually"]
+                : enabledCardTypes.filter((type) => type !== "UmActually");
+              setEnabledCardTypes(newCardTypes);
+            }}
+          />
+          {""}
+          Um, Actually
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            checked={enabledCardTypes.includes("Categories")}
+            onChange={(e) => {
+              const newCardTypes = e.target.checked
+                ? [...enabledCardTypes, "Categories"]
+                : enabledCardTypes.filter((type) => type !== "Categories");
+              setEnabledCardTypes(newCardTypes);
+            }}
+          />
+          {""}
+          Categories
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            checked={enabledCardTypes.includes("Rule")}
+            onChange={(e) => {
+              const newCardTypes = e.target.checked
+                ? [...enabledCardTypes, "Rule"]
+                : enabledCardTypes.filter((type) => type !== "Rule");
+              setEnabledCardTypes(newCardTypes);
+            }}
+          />
+          {""}
+          Persistent Rules
+        </label>
+      </div>
     </div>
   );
 };

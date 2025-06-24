@@ -13,10 +13,14 @@ const StandardCardPage: React.FunctionComponent<StandardCardPageProps> = ({
   return (
     <button className="invisibleButton" onClick={nextQuestion}>
       <h1>
-        {question.startString.replace(
-          /\{person(\d+)\}/g,
-          (_, idx) => players[parseInt(idx, 10) % players.length] || ""
-        )}
+        {question.startString
+          .replace(
+            /\{person(\d+)\}/g,
+            (_, idx) => players[parseInt(idx, 10) % players.length] || ""
+          )
+          .replace(/\{number\}/g, () =>
+            String(Math.floor(Math.random() * 4) + 2)
+          )}
       </h1>
     </button>
   );

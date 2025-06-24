@@ -14,7 +14,10 @@ const CategoriesCardPage: React.FunctionComponent<CategoriesCardPageProps> = ({
     <button className="invisibleButton" onClick={nextQuestion}>
       <h1>Categories!</h1>
       <h2>
-        {question.startString}
+        {question.startString.replace(
+          /\{person(\d+)\}/g,
+          (_, idx) => players[parseInt(idx, 10) % players.length] || ""
+        )}
         <br />
         <br />
         <u>{players[Math.floor(Math.random() * players.length)]}</u> to start.

@@ -9,32 +9,140 @@ export const standardQuestions: Question[] = [
   {
     type: QuestionType.Standard,
     startString:
-      "{person1} and {person2} - whoever has more instagram followers can give out a number of drinks equal to the first digit of their follower count.",
+      "{person1} must hum a song. The other players must guess the song. The first to guess correctly can give out {number} drinks.",
   },
   {
     type: QuestionType.Standard,
     startString:
-      "{person1} and {person2} - whoever has more instagram followers can give out a number of drinks equal to the first digit of their follower count.",
+      "Who is the funniest person in the room? The comedian must drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Anyone who smokes drinks 4 times.",
   },
   {
     type: QuestionType.Standard,
     startString:
-      "{person1} and {person2} - whoever has more instagram followers can give out a number of drinks equal to the first digit of their follower count.",
+      "Vote for someone to test their sobriety. They must stand on one leg for 10 seconds. If they fall, they drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Everyone take a drink without using your hands.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Everyone drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Tallest player, give out {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Tallest player, drink {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Shortest player, give out {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Shortest player, drink {number} drinks.",
   },
   {
     type: QuestionType.Standard,
     startString:
-      "{person1} and {person2} - whoever has more instagram followers can give out a number of drinks equal to the first digit of their follower count.",
+      "Vote for the person you think can do the most pushups. They can give out 1 drink for every 5 pushups they can do.",
   },
   {
     type: QuestionType.Standard,
     startString:
-      "{person1} and {person2} - whoever has more instagram followers can give out a number of drinks equal to the first digit of their follower count.",
+      "If you can bend over and touch your toes, give out {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "If your hair color is not natural give out {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Anyone with brown eyes give out {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Anyone with brown eyes drink {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Anyone with blue eyes give out {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Anyone with blue eyes give out {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Anyone with green eyes give out {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Men drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Women drink {number} times.",
   },
   {
     type: QuestionType.Standard,
     startString:
-      "{person1} and {person2} - whoever has more instagram followers can give out a number of drinks equal to the first digit of their follower count.",
+      "If you've drunk in the last 3 rounds, give out {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "If you've ever been skinnydipping give out {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Men finish your drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Women finish your drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Christians/Catholics, finish your drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "The person who shaved most recently gives out {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Anyone who has been pulled over by the police drinks {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Play a round of Truth or Dare - anyone who refuses to participate drinks {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Play a round of Never Have I Ever - three fingers up, first to lose all fingers drinks {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Anyone who can do a backflip gives out {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Everyone give out {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Everyone give out {number} drinks.",
   },
 ];
 
@@ -85,18 +193,6 @@ export const categoryQuestions: Question[] = [
   },
   {
     type: QuestionType.Categories,
-    startString: "Animals",
-  },
-  {
-    type: QuestionType.Categories,
-    startString: "Colors",
-  },
-  {
-    type: QuestionType.Categories,
-    startString: "Languages",
-  },
-  {
-    type: QuestionType.Categories,
     startString: "Musical Instruments",
   },
   {
@@ -109,7 +205,19 @@ export const categoryQuestions: Question[] = [
   },
   {
     type: QuestionType.Categories,
-    startString: "Tech Companies",
+    startString: "Show Brands",
+  },
+  {
+    type: QuestionType.Categories,
+    startString: "Sex Positions",
+  },
+  {
+    type: QuestionType.Categories,
+    startString: "Synonyms for the word 'penis'",
+  },
+  {
+    type: QuestionType.Categories,
+    startString: "{person1}'s choice!",
   },
 ];
 
@@ -127,7 +235,7 @@ export const ruleQuestions: Question[] = [
   },
   {
     type: QuestionType.Rule,
-    startString: "You must use an accent that is not your native.",
+    startString: "You must use an accent that is not your native one.",
     endString: "You may speak however you like.",
   },
   {
@@ -139,6 +247,18 @@ export const ruleQuestions: Question[] = [
     type: QuestionType.Rule,
     startString: "Before you drink, you must cheers another player.",
     endString: "You may drink without cheersing.",
+  },
+  {
+    type: QuestionType.Rule,
+    startString:
+      "No looking at your phone (besides the current player, smartass).",
+    endString: "You may look at your phone again.",
+  },
+  {
+    type: QuestionType.Rule,
+    startString:
+      "The youngest player is now called 'Little Baby'. Anyone who calls them by their real name has to drink.",
+    endString: "The baby has grown up.",
   },
 ];
 
@@ -153,8 +273,7 @@ export const umActuallyQuestions: Question[] = [
     type: QuestionType.UmActually,
     startString:
       "In all *Pokémon* games, the player is given the option between three starter Pokémon - one Fire type, one Water type and one Grass type. Up until Omega Ruby and Alpha Sapphire, your rival would pick the one with a type advantage over yours. From Sun and Moon onwards, your rival picks the one with a type disadvantage.",
-    endString:
-      `In "Pokémon Yellow: Special Pikachu edition", "Lets Go Pikachu!" and "Lets Go Eevee!", your starters are Pikachu and Eevee respectively.`,
+    endString: `In "Pokémon Yellow: Special Pikachu edition", "Lets Go Pikachu!" and "Lets Go Eevee!", your starters are Pikachu and Eevee respectively.`,
   },
   {
     type: QuestionType.UmActually,
@@ -178,8 +297,7 @@ export const umActuallyQuestions: Question[] = [
     type: QuestionType.UmActually,
     startString:
       "In *Marvel Comics*, Captain America's shield is so strong because it is made of Adamantium, the same metal in Wolverine's skeleton.",
-    endString:
-      "Captain America's shield is made of Vibranium.",
+    endString: "Captain America's shield is made of Vibranium.",
   },
   {
     type: QuestionType.UmActually,
@@ -204,7 +322,8 @@ export const umActuallyQuestions: Question[] = [
     type: QuestionType.UmActually,
     startString:
       "In *Harry Potter*, the Deathly Hallows are magical items won by the Peverell Brothers from Gellert Grindelwald They are The Elder Wand, the Resurrection Stone, and the Cloak of Invisibility.",
-    endString: "The Peverell brothers won the Hallows from Death himself, not Gellert Grindelwald.",
+    endString:
+      "The Peverell brothers won the Hallows from Death himself, not Gellert Grindelwald.",
   },
   {
     type: QuestionType.UmActually,
