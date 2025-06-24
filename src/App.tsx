@@ -1,7 +1,6 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import { Question } from "./models/question";
+import { Question, QuestionType } from "./models/question";
 import {
   standardQuestions,
   categoryQuestions,
@@ -10,12 +9,18 @@ import {
 } from "./constants/questions";
 import PlayersPage from "./components/pages/playersPage/playersPage";
 import { Rule } from "./models/rule";
+import StandardCardPage from "./components/pages/cardPages/standardCardPage";
+import UmActuallyPage from "./components/pages/cardPages/umActuallyCardPage";
 
 function App() {
   const [gameStarted, setGameStarted] = React.useState<boolean>(false);
   const [questionList, setQuestionList] = React.useState<Question[]>([]);
   const [currentRules, setCurrentRules] = React.useState<Rule[]>([]);
   const [currentPlayers, setCurrentPlayers] = React.useState<string[]>([]);
+
+  React.useEffect(() => {
+    startGame(["Will", "Steve", "Tanisha"]);
+  }, []);
 
   function startGame(players: string[]) {
     if (players.length < 2) {
@@ -24,8 +29,6 @@ function App() {
     }
     setCurrentPlayers(players);
     setGameStarted(true);
-
-    console.log("Game started with players:", players);
 
     const questions: Question[] = [
       ...standardQuestions,
@@ -41,15 +44,44 @@ function App() {
     setQuestionList(questions.slice(0, 30));
   }
 
+  function nextQuestion() {
+    setQuestionList((prevQuestions) => {
+      const newQuestions = [...prevQuestions];
+      newQuestions.shift();
+      return newQuestions;
+    });
+  }
+
   console.log("Question List:", questionList);
+
+  const currentQuestion = questionList.length > 0 ? questionList[0] : null;
+
+  console.log("Current Question:", currentQuestion);
 
   return (
     <div className="App">
       {gameStarted ? (
-        <div>
-          <h1>Game Started</h1>
-          <p>Here you can implement the game logic and display questions.</p>
-        </div>
+        <>
+          {currentQuestion ? (
+            <>
+              {currentQuestion.type === QuestionType.Standard && (
+                <StandardCardPage
+                  question={currentQuestion}
+                  players={currentPlayers}
+                  nextQuestion={nextQuestion}
+                />
+              )}
+              {currentQuestion.type === QuestionType.UmActually && (
+                <UmActuallyPage
+                  question={currentQuestion}
+                  players={currentPlayers}
+                />
+              )}
+            </>
+          ) : (
+            <></>
+          )}
+        </>
       ) : (
         <PlayersPage startGame={startGame} />
       )}

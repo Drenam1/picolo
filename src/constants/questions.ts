@@ -6,6 +6,36 @@ export const standardQuestions: Question[] = [
     startString:
       "{person1} and {person2} - whoever has more instagram followers can give out a number of drinks equal to the first digit of their follower count.",
   },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{person1} and {person2} - whoever has more instagram followers can give out a number of drinks equal to the first digit of their follower count.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{person1} and {person2} - whoever has more instagram followers can give out a number of drinks equal to the first digit of their follower count.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{person1} and {person2} - whoever has more instagram followers can give out a number of drinks equal to the first digit of their follower count.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{person1} and {person2} - whoever has more instagram followers can give out a number of drinks equal to the first digit of their follower count.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{person1} and {person2} - whoever has more instagram followers can give out a number of drinks equal to the first digit of their follower count.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{person1} and {person2} - whoever has more instagram followers can give out a number of drinks equal to the first digit of their follower count.",
+  },
 ];
 
 export const categoryQuestions: Question[] = [
