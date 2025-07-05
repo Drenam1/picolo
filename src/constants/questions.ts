@@ -5,26 +5,26 @@ export const standardQuestions: Question[] = [
   {
     type: QuestionType.Standard,
     startString:
-      "{person1} and {person2} - whoever has more instagram followers can give out a number of drinks equal to the first digit of their follower count.",
+      "{player} and {player} - whoever has more instagram followers can give out a number of drinks equal to the first digit of their follower count.",
   },
   {
     type: QuestionType.Standard,
     startString:
-      "{person1} must hum a song. The other players must guess the song. The first to guess correctly can give out {number} drinks.",
+      "{player} must hum a song. The other players must guess the song. The first to guess correctly may nominate {number} drinks.",
   },
   {
     type: QuestionType.Standard,
     startString:
-      "Who is the funniest person in the room? The comedian must drink {number} times.",
+      "Who is the funniest person in the room? The comedian {giveortake} {number} times.",
   },
   {
     type: QuestionType.Standard,
-    startString: "Anyone who smokes drinks 4 times.",
+    startString: "Anyone who smokes {giveortake} {number} times.",
   },
   {
     type: QuestionType.Standard,
     startString:
-      "Vote for someone to test their sobriety. They must stand on one leg for 10 seconds. If they fall, they drink {number} times.",
+      "Vote for someone to test their sobriety. They must stand on one leg for 10 seconds. If they fall, they must drink {number} times.",
   },
   {
     type: QuestionType.Standard,
@@ -36,19 +36,11 @@ export const standardQuestions: Question[] = [
   },
   {
     type: QuestionType.Standard,
-    startString: "Tallest player, give out {number} drinks.",
+    startString: "The tallest player {giveortake} {number} drinks.",
   },
   {
     type: QuestionType.Standard,
-    startString: "Tallest player, drink {number} drinks.",
-  },
-  {
-    type: QuestionType.Standard,
-    startString: "Shortest player, give out {number} drinks.",
-  },
-  {
-    type: QuestionType.Standard,
-    startString: "Shortest player, drink {number} drinks.",
+    startString: "The shortest player {giveortake} {number} drinks.",
   },
   {
     type: QuestionType.Standard,
@@ -58,56 +50,54 @@ export const standardQuestions: Question[] = [
   {
     type: QuestionType.Standard,
     startString:
-      "If you can bend over and touch your toes, give out {number} drinks.",
-  },
-  {
-    type: QuestionType.Standard,
-    startString: "If your hair color is not natural give out {number} drinks.",
-  },
-  {
-    type: QuestionType.Standard,
-    startString: "Anyone with brown eyes give out {number} drinks.",
-  },
-  {
-    type: QuestionType.Standard,
-    startString: "Anyone with brown eyes drink {number} drinks.",
-  },
-  {
-    type: QuestionType.Standard,
-    startString: "Anyone with blue eyes give out {number} drinks.",
-  },
-  {
-    type: QuestionType.Standard,
-    startString: "Anyone with blue eyes give out {number} drinks.",
-  },
-  {
-    type: QuestionType.Standard,
-    startString: "Anyone with green eyes give out {number} drinks.",
-  },
-  {
-    type: QuestionType.Standard,
-    startString: "Men drink {number} times.",
-  },
-  {
-    type: QuestionType.Standard,
-    startString: "Women drink {number} times.",
+      "If you can bend over and touch your toes, you can nominate {number} drinks.",
   },
   {
     type: QuestionType.Standard,
     startString:
-      "If you've drunk in the last 3 rounds, give out {number} drinks.",
+      "If your hair color is not natural you {giveortake} {number} drinks.",
   },
   {
     type: QuestionType.Standard,
-    startString: "If you've ever been skinnydipping give out {number} drinks.",
+    startString: "Anyone with brown eyes {giveortake} {number} drinks.",
   },
   {
     type: QuestionType.Standard,
-    startString: "Men finish your drinks.",
+    startString: "Anyone with blue eyes {giveortake} {number} drinks.",
   },
   {
     type: QuestionType.Standard,
-    startString: "Women finish your drinks.",
+    startString: "Anyone with green eyes {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Anyone with hazel eyes {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Men {giveortake} {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Women {giveortake} {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "If you've drunk in the last 3 rounds, you {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "If you've ever been skinnydipping you {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Men, finish your drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Women, finish your drinks.",
   },
   {
     type: QuestionType.Standard,
@@ -116,12 +106,12 @@ export const standardQuestions: Question[] = [
   {
     type: QuestionType.Standard,
     startString:
-      "The person who shaved most recently gives out {number} drinks.",
+      "The person who shaved most recently {giveortake} {number} drinks.",
   },
   {
     type: QuestionType.Standard,
     startString:
-      "Anyone who has been pulled over by the police drinks {number} times.",
+      "Anyone who has been pulled over by the police {giveortake} {number} times.",
   },
   {
     type: QuestionType.Standard,
@@ -135,20 +125,16 @@ export const standardQuestions: Question[] = [
   },
   {
     type: QuestionType.Standard,
-    startString: "Anyone who can do a backflip gives out {number} drinks.",
+    startString: "Anyone who can do a backflip may nominate {number} drinks.",
   },
   {
     type: QuestionType.Standard,
-    startString: "Everyone give out {number} drinks.",
-  },
-  {
-    type: QuestionType.Standard,
-    startString: "Everyone give out {number} drinks.",
+    startString: "Everyone nominate {number} drinks.",
   },
   {
     type: QuestionType.Standard,
     startString:
-      "Anyone willing to tell the group about their worst date ever can give out {number} drinks.",
+      "Anyone willing to tell the group about their worst date ever can nominate {number} drinks.",
   },
   {
     type: QuestionType.Standard,
@@ -158,16 +144,17 @@ export const standardQuestions: Question[] = [
   {
     type: QuestionType.Standard,
     startString:
-      "Anyone whos second toe is longer than their big toe drinks {number} times.",
+      "Anyone whos second toe is longer than their big toe {giveortake} {number} times.",
   },
   {
     type: QuestionType.Standard,
     startString:
-      "Anyone who has vomited on public transport drinks {number} times.",
+      "Anyone who has vomited on public transport {giveortake} {number} times.",
   },
   {
     type: QuestionType.Standard,
-    startString: "If your body count is over 20 drink {number} times.",
+    startString:
+      "If your body count is over 20 you {giveortake} {number} times.",
   },
   {
     type: QuestionType.Standard,
@@ -175,12 +162,12 @@ export const standardQuestions: Question[] = [
   },
   {
     type: QuestionType.Standard,
-    startString: "Anyone wearing glasses drinks {number} times.",
+    startString: "Anyone wearing glasses {giveortake} {number} times.",
   },
   {
     type: QuestionType.Standard,
     startString:
-      "{person1} must record a 5-second moivational video for {person2} or drink {number} times.",
+      "{player} must record a 5-second moivational video for {player} or drink {number} times.",
   },
   {
     type: QuestionType.Standard,
@@ -190,12 +177,12 @@ export const standardQuestions: Question[] = [
   {
     type: QuestionType.Standard,
     startString:
-      "{person1}, come up with a name for an erotic fiction novel detail what it's about, or drink {number} times.",
+      "{player}, come up with a name for an erotic fiction novel and detail what it's about, or drink {number} times.",
   },
   {
     type: QuestionType.Standard,
     startString:
-      "{person1}, do your best impression of {person2} or drink {number} times.",
+      "{player}, do your best impression of {player} or drink {number} times.",
   },
   {
     type: QuestionType.Standard,
@@ -205,7 +192,7 @@ export const standardQuestions: Question[] = [
   {
     type: QuestionType.Standard,
     startString:
-      "{person1} and {person2} must slow dance with each other to the next song, regardless of what that song is, or both players must drink {number} times.",
+      "{player} and {player} must slow dance with each other to the next song, regardless of what that song is, or both players must drink {number} times.",
   },
   {
     type: QuestionType.Standard,
@@ -215,11 +202,11 @@ export const standardQuestions: Question[] = [
   {
     type: QuestionType.Standard,
     startString:
-      "{person1} and {person2} has to admit what they like to be called in bed. If they admit it, they can give out {number} drinks.",
+      "{player} has to admit what they like to be called in bed. If they admit it they can give out {number} drinks, oherwise drink that many.",
   },
   {
     type: QuestionType.Standard,
-    startString: "{person1} must feed {person2} a piece of food or drink.",
+    startString: "{player} must feed {player} a piece of food or drink.",
   },
   {
     type: QuestionType.Standard,
@@ -228,17 +215,17 @@ export const standardQuestions: Question[] = [
   {
     type: QuestionType.Standard,
     startString:
-      "{person1} must start into {person2}'s eyes without breaking eye contact for 30 seconds or drink {number}.",
+      "{player} must start into {player}'s eyes without breaking eye contact for 30 seconds or drink {number}.",
   },
   {
     type: QuestionType.Standard,
     startString:
-      "Waterfall! Starting with {person1} and moving clokwise, everyone drinks until the person before them stops.",
+      "Waterfall! Starting with {player} and moving clokwise, everyone drinks until the person before them stops.",
   },
   {
     type: QuestionType.Standard,
     startString:
-      "{person1}, pick who is the least drunk. That person must finish their drink.",
+      "{player}, pick who is the least drunk. That person must finish their drink.",
   },
   {
     type: QuestionType.Standard,
@@ -248,17 +235,17 @@ export const standardQuestions: Question[] = [
   {
     type: QuestionType.Standard,
     startString:
-      "Anyone whos partner is older than them gives out {number} drinks.",
+      "Anyone whos partner is older than them {giveortake} {number} drinks.",
   },
   {
     type: QuestionType.Standard,
     startString:
-      "{person1} give a personalized compliment to all the players (including yourself) or finish your drink.",
+      "{player}, give a personalized compliment to all the players (including yourself) or finish your drink.",
   },
   {
     type: QuestionType.Standard,
     startString:
-      "{person1} must let {person2} give them a nickname for the rest of the night.",
+      "{player} must let {player} give them a nickname for the rest of the game.",
   },
   {
     type: QuestionType.Standard,
@@ -268,20 +255,15 @@ export const standardQuestions: Question[] = [
   {
     type: QuestionType.Standard,
     startString:
-      "Who is the most positive player? Vote, and Bob Ross can give out {number} drinks.",
+      "Who is the most positive player? Vote, and Bob Ross can nominate {number} drinks.",
   },
   {
     type: QuestionType.Standard,
-    startString: "If you're wearing fun socks, give out {number} drinks.",
+    startString: "If you're wearing fun socks, nominate {number} drinks.",
   },
   {
     type: QuestionType.Standard,
-    startString:
-      "Anyone whos name begins with J can choose someone else to finish half their drink.",
-  },
-  {
-    type: QuestionType.Standard,
-    startString: "Anyone drinking water right now has to finish it.",
+    startString: "Anyone drinking water right now has to finish it. Hydrate!",
   },
   {
     type: QuestionType.Standard,
@@ -295,17 +277,17 @@ export const standardQuestions: Question[] = [
   {
     type: QuestionType.Standard,
     startString:
-      "Mix together a cocktail of everone's drinks. {person1} has to drink it.",
+      "Mix together a cocktail of everone's drinks. {player} has to drink it.",
   },
   {
     type: QuestionType.Standard,
     startString:
-      "{person1} must give a lapdance to {person2}. If either person refuses, both must drink {number} times.",
+      "{player} must give a lapdance to {player}. If either person refuses, both must drink {number} times.",
   },
   {
     type: QuestionType.Standard,
     startString:
-      "{person1}, pick someone to pick someone else that will drink 5 times.",
+      "{player}, pick someone to pick someone else that will drink 5 times.",
   },
   {
     type: QuestionType.Standard,
@@ -315,17 +297,17 @@ export const standardQuestions: Question[] = [
   {
     type: QuestionType.Standard,
     startString:
-      "{person1}, share your body count to give out 12 drinks, or drink {number} yourself.",
+      "{player}, share your body count to give out 12 drinks, or drink {number} yourself.",
   },
   {
     type: QuestionType.Standard,
     startString:
-      "{person1} must sit on {person2}'s lap for the next 2 rounds, or drink {number} times.",
+      "{player} must sit on {player}'s lap for the next 2 rounds, or drink {number} times.",
   },
   {
     type: QuestionType.Standard,
     startString:
-      "{person1} drinks 8 times. The person to their left drinks 1 less, all the way around until you reach 0.",
+      "{player} drinks 8 times. The person to their left drinks 1 less, all the way around until you reach 0.",
   },
   {
     type: QuestionType.Standard,
@@ -334,8 +316,7 @@ export const standardQuestions: Question[] = [
   },
   {
     type: QuestionType.Standard,
-    startString:
-      "{person1}, ever done 69 before? If yes, drink {number} times.",
+    startString: "{player}, ever done 69 before? If yes, drink {number} times.",
   },
   {
     type: QuestionType.Standard,
@@ -419,7 +400,7 @@ export const categoryQuestions: Question[] = [
   },
   {
     type: QuestionType.Categories,
-    startString: "{person1}'s choice!",
+    startString: "{player}'s choice!",
   },
 ];
 
@@ -471,7 +452,7 @@ export const ruleQuestions: Question[] = [
   {
     type: QuestionType.Rule,
     startString:
-      "{person1} is now snake eyes. If you make eye contact with them, you must drink.",
+      "{player} is now snake eyes. If you make eye contact with them, you must drink.",
     endString: "Your eyes have returned to normal.",
   },
 ];

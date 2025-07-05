@@ -67,25 +67,27 @@ const PlayersPage: React.FunctionComponent<PlayersPageProps> = ({
           </li>
         ))}
       </ul>
-      <button type="button" onClick={() => setPlayers([...players, ""])}>
-        Add Player
-      </button>
-      {players.filter((player) => !!player).length > 1 && (
-        <button
-          type="button"
-          disabled={enabledCardTypes.length === 0}
-          onClick={() => {
-            startGame(
-              players.filter((player) => !!player),
-              enabledCardTypes,
-              selectedTopics
-            );
-          }}
-          className="start-game-button"
-        >
-          Start Game
+      <div className="buttons">
+        <button type="button" onClick={() => setPlayers([...players, ""])}>
+          Add Player
         </button>
-      )}
+        {players.filter((player) => !!player).length > 1 && (
+          <button
+            type="button"
+            disabled={enabledCardTypes.length === 0}
+            onClick={() => {
+              startGame(
+                players.filter((player) => !!player),
+                enabledCardTypes,
+                selectedTopics
+              );
+            }}
+            className="start-game-button"
+          >
+            Start Game
+          </button>
+        )}
+      </div>
       <h2>Select Desired Card Types</h2>
       <div className="card-types">
         <label>
@@ -150,7 +152,7 @@ const PlayersPage: React.FunctionComponent<PlayersPageProps> = ({
           <h3>Select "Um Actually" Topics</h3>
           <div className="topics-list">
             {allUmActuallyTopics.sort().map((topic) => (
-              <label key={topic} style={{ marginRight: 12 }}>
+              <label key={topic}>
                 <input
                   type="checkbox"
                   checked={selectedTopics.includes(topic)}

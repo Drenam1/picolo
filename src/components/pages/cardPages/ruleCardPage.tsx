@@ -1,3 +1,4 @@
+import GenericHelper from "../../../helpers/generichelper";
 import { Question } from "../../../models/question";
 
 export interface RuleCardPageProps {
@@ -21,12 +22,7 @@ const RuleCardPage: React.FunctionComponent<RuleCardPageProps> = ({
       }}
     >
       <h1>New Rule!</h1>
-      <h2>
-        {question.startString.replace(
-          /\{person(\d+)\}/g,
-          (_, idx) => players[parseInt(idx, 10) % players.length] || ""
-        )}
-      </h2>
+      <h2>{GenericHelper.replaceTokens(question.startString, players)}</h2>
     </button>
   );
 };

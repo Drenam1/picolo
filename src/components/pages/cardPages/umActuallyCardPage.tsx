@@ -1,5 +1,6 @@
 import React from "react";
 import { Question } from "../../../models/question";
+import GenericHelper from "../../../helpers/generichelper";
 
 export interface UmActuallyCardPageProps {
   players: string[];
@@ -11,13 +12,15 @@ const UmActuallyCardPage: React.FunctionComponent<UmActuallyCardPageProps> = ({
   question,
   nextQuestion,
 }) => {
+  const [punishment, setPunishment] = React.useState<number>(0);
+  const [punisher, setPunisher] = React.useState<string>("");
+  React.useEffect(() => {
+    setPunishment(Math.floor(Math.random() * 4) + 4);
+    setPunisher(GenericHelper.randomFromArray(players));
+  }, [question, players]);
+
   const [currentPage, setCurrentPage] = React.useState<number>(0);
-  const [punishment] = React.useState<number>(
-    Math.floor(Math.random() * 4) + 4
-  );
-  const [punisher] = React.useState<string>(
-    players[Math.floor(Math.random() * players.length)]
-  );
+
   if (currentPage === 0) {
     return (
       <button className="invisibleButton" onClick={() => setCurrentPage(1)}>
@@ -27,7 +30,8 @@ const UmActuallyCardPage: React.FunctionComponent<UmActuallyCardPageProps> = ({
           read the question aloud and then the other players will try to correct
           the statement, first stating the phrase 'Um, actually...'. The first
           player to correct the statement can nominate {punishment} drinks. If
-          no one can correct the statement, {punisher} can nominate {punishment}{" "}
+          no one can correct the statement, {punisher} can{" "}
+          {GenericHelper.replaceTokens("{giveortake}", players)} {punishment}{" "}
           drinks.
           <br />
           <br />

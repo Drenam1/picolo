@@ -3,6 +3,10 @@
   flex-direction: column;
   flex-wrap: wrap;
   gap: 1rem;
+  label {
+    width: fit-content;
+    align-self: center;
+  }
 }
 
 .topics-list {
@@ -10,4 +14,25 @@
   flex-direction: column;
   flex-wrap: wrap;
   gap: 1rem;
+  label {
+    width: fit-content;
+    align-self: center;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.players-list {
+  li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+  }
 }

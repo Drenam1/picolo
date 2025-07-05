@@ -1,3 +1,4 @@
+import GenericHelper from "../../../helpers/generichelper";
 import { Question } from "../../../models/question";
 
 export interface StandardCardPageProps {
@@ -12,16 +13,7 @@ const StandardCardPage: React.FunctionComponent<StandardCardPageProps> = ({
 }) => {
   return (
     <button className="invisibleButton" onClick={nextQuestion}>
-      <h1>
-        {question.startString
-          .replace(
-            /\{person(\d+)\}/g,
-            (_, idx) => players[parseInt(idx, 10) % players.length] || ""
-          )
-          .replace(/\{number\}/g, () =>
-            String(Math.floor(Math.random() * 4) + 2)
-          )}
-      </h1>
+      <h1>{GenericHelper.replaceTokens(question.startString, players)}</h1>
     </button>
   );
 };
