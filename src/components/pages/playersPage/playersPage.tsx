@@ -1,8 +1,13 @@
 import React from "react";
 import "./playersPage.css";
+import { Topic } from "../../../constants/topic";
 
 export interface PlayersPageProps {
-  startGame: (players: string[], cardTypes: string[]) => void;
+  startGame: (
+    players: string[],
+    cardTypes: string[],
+    selectedTopics: string[]
+  ) => void;
 }
 
 const PlayersPage: React.FunctionComponent<PlayersPageProps> = ({
@@ -15,12 +20,24 @@ const PlayersPage: React.FunctionComponent<PlayersPageProps> = ({
     "Categories",
     "Rule",
   ]);
+  const allUmActuallyTopics = Object.values(Topic);
+  const [selectedTopics, setSelectedTopics] = React.useState<string[]>(() => {
+    const stored = localStorage.getItem("picolo_umactually_topics");
+    return stored ? JSON.parse(stored) : Object.values(Topic);
+  });
+
   React.useEffect(() => {
     const storedPlayers = localStorage.getItem("picolo_players");
     if (storedPlayers) {
       setPlayers(JSON.parse(storedPlayers));
     }
   }, []);
+
+  const toggleTopic = (topic: string) => {
+    setSelectedTopics((prev) =>
+      prev.includes(topic) ? prev.filter((t) => t !== topic) : [...prev, topic]
+    );
+  };
 
   return (
     <div className="players-page">
@@ -58,11 +75,10 @@ const PlayersPage: React.FunctionComponent<PlayersPageProps> = ({
           type="button"
           disabled={enabledCardTypes.length === 0}
           onClick={() => {
-            // Here you can implement the logic to start the game
-            console.log("Starting game with players:", players);
             startGame(
               players.filter((player) => !!player),
-              enabledCardTypes
+              enabledCardTypes,
+              selectedTopics
             );
           }}
           className="start-game-button"
@@ -84,21 +100,7 @@ const PlayersPage: React.FunctionComponent<PlayersPageProps> = ({
             }}
           />
           {""}
-          Um, Actually
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            checked={enabledCardTypes.includes("UmActually")}
-            onChange={(e) => {
-              const newCardTypes = e.target.checked
-                ? [...enabledCardTypes, "UmActually"]
-                : enabledCardTypes.filter((type) => type !== "UmActually");
-              setEnabledCardTypes(newCardTypes);
-            }}
-          />
-          {""}
-          Um, Actually
+          Standard
         </label>
         <label>
           <input
@@ -128,7 +130,41 @@ const PlayersPage: React.FunctionComponent<PlayersPageProps> = ({
           {""}
           Persistent Rules
         </label>
+        <label>
+          <input
+            type="checkbox"
+            checked={enabledCardTypes.includes("UmActually")}
+            onChange={(e) => {
+              const newCardTypes = e.target.checked
+                ? [...enabledCardTypes, "UmActually"]
+                : enabledCardTypes.filter((type) => type !== "UmActually");
+              setEnabledCardTypes(newCardTypes);
+            }}
+          />
+          {""}
+          Um, Actually
+        </label>
       </div>
+      {enabledCardTypes.includes("UmActually") && (
+        <div className="um-actually-topics">
+          <h3>Select "Um Actually" Topics</h3>
+          <div className="topics-list">
+            {allUmActuallyTopics.sort().map((topic) => (
+              <label key={topic} style={{ marginRight: 12 }}>
+                <input
+                  type="checkbox"
+                  checked={selectedTopics.includes(topic)}
+                  onChange={() => toggleTopic(topic)}
+                />
+                {topic}
+              </label>
+            ))}
+            {selectedTopics.length === 0 && (
+              <div style={{ color: "red" }}>Select at least one topic.</div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

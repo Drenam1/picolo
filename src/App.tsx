@@ -39,8 +39,16 @@ function App() {
     }
   }, []);
 
-  function startGame(players: string[], enabledCardTypes: string[]) {
+  function startGame(
+    players: string[],
+    enabledCardTypes: string[],
+    enabledUmActuallyTopics: string[]
+  ) {
     localStorage.setItem("picolo_players", JSON.stringify(players));
+    localStorage.setItem(
+      "picolo_umactually_topics",
+      JSON.stringify(enabledUmActuallyTopics)
+    );
     if (players.length < 2) {
       alert("You need at least 2 players to start the game.");
       return;
@@ -52,7 +60,11 @@ function App() {
       questions.push(...standardQuestions);
     }
     if (enabledCardTypes.includes("UmActually")) {
-      questions.push(...umActuallyQuestions);
+      // Filter questions based on enabled topics
+      const filteredUmActuallyQuestions = umActuallyQuestions.filter((q) =>
+        q.topics?.some((topic) => enabledUmActuallyTopics.includes(topic))
+      );
+      questions.push(...filteredUmActuallyQuestions);
     }
     if (enabledCardTypes.includes("Categories")) {
       questions.push(...categoryQuestions);
@@ -97,11 +109,7 @@ function App() {
     setCurrentRules([...currentRules, rule]);
   }
 
-  console.log("Question List:", questionList);
-
   const currentQuestion = questionList.length > 0 ? questionList[0] : null;
-
-  console.log("Current Question:", currentQuestion);
 
   return (
     <div className="App" style={{ backgroundColor: currentColor }}>
