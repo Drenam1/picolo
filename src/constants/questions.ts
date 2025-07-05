@@ -506,13 +506,498 @@ export const standardQuestions: Question[] = [
   },
   {
     type: QuestionType.Standard,
-    startString:
-      "Anyone who has spent more than £300 in a single night out {giveortake} {number} drinks.",
+    startString: "Anyone who has been catfished {giveortake} {number} drinks.",
   },
   {
     type: QuestionType.Standard,
     startString:
-      "Anyone who has been catfished {giveortake} {number} drinks.",
+      "Ladies, drink as many times as there are handsome guys in the room.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Gents, drink as many times as there are pretty ladies in the room.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Drink {number} times if you think your partner has a weird shaped sex organ.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Drink once if you're single, twice if you're in a relationship, 3 times if it's a bit more complicated.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "If you've been in a relationship for more than a year you {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Vote for the grumpiest person among the players. Grouchy {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Everyone take as many drinks as the number of years you studied after high school.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "The girl with the biggest boobs {giveortake} {number} sips.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Rock Paper Scissors challenge between the oldest and the youngest player; loser will drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Brainiacs who skipped a year in school {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "If you were drunk yesterday, drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "The first one to come up with an inspirational saying (worthy of a cheesy poster) can nominate {number} sips!",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Hands up! Last person with their hands in the air drinks {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "The current DJ can nominate {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "If you can touch the tip of your nose your nose with your tongue, you can nominate {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "If you are busy smoking/vaping right now, you {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Those who didn't want to play Picolo drink {number} times. Sucks to suck!",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Everyone drink for the number of people in their contacts that they know from dating apps.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Next person to burp {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Next player to drink must double the number of drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Next player to drink must triple the number of drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Next player to drink must instead double that number and nominate someone else to drnk them.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Blondes {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Brunettes {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Redheads {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "If you've ever donated blood, you {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Anyone who weighs less than 90kg, get fatter by chugging your drink. Choose a player to toast you with {number} sips.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "If you've ever cancelled a date because you masturbated and didn't fancy it anymore, you {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "If you currently have a pimple bothering you, you {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "If you've ever had sex in a bed that wasn't you or your partners, you {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "If you've ever had sex in a bed that wasn't you or your partners, you {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "If you're drinking someone else's drink, or a drink someone else paid for, thank them and drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Heterosexuals, you {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Anyone who isn't straight, you {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, say a statement about yourself. It can be a truth or lie. Everone else must decide if its the truth or not. Anyone wrong must drink {number} drinks. For everyone who gets it right, you must drink 1 drink.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "If there are more men than women, men must drink {number} times. If there are more women than men, women must drink instead. If the numbers are equal, everyone drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, choose two other players. They have to kiss each other or they both must drink {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Everyone must drink double next round.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "The person with the largest shoe size {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "The person with the smallest shoe size {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Anyone who owns an Apple product {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Anyone currently unemployed (funemployed?) {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "If you enjoy the flavor of your current drink {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "On the count of three, everone point to a player. The person who has the most points {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Anyone who met one of the other players for the first time today {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, tell everone where and how you met the player on your left.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Anyone with a one syllable name {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, tell the person to your left a joke. If they like it, you can give out {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, tell two truths and one lie about yourself. {player} must guess which is the lie. If they get it right, the liar must drink {number} drinks, otherwise the guesser must drink.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "The player with the most cash on them {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, play a game of heads or tails. If you win, nominate {number} drinks, else drink them.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Anyone who has spilt a drink tonight {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Everyone raise their drinks, say 'Cheers!' and take a drink.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player} choose which players look the most alike. The twins must both drink {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player} finish your drink in under 10 seconds. If you fail, finish your drink anyway, then get a new drink and finish that one too.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Anyone drinking beer {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Anyone drinking wine {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "In your drink is mixed, you {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "The most buff player {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Everyone must remove an item of clothing or drink {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Bearded players {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "If your best friend is playing this game, you must drink {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "80's kids {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "90's kids {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "2000's kids {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, tell a joke. If no-one laughs you must drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, if you can name the song playing right now you can nominate {number} drinks. If you can't or there is no music, you must drink instead.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Everyone drink for the number of siblings you have.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "The girl with the shortest hair {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "The guy with the longest hair {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, have a staring contest with {player}. The loser must drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Everyone look down and, on the count of three, look up at another players eyes. Any players making eye cotact with each other must drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, choose the player with the nicest smile. That person must drink {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, kiss the player on either your left or right. You and that person must drink {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Anyone with lipstick must drink, reapply and kiss someone on the cheek.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Whoever left the room last {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, ask {player} a (fair) trivia question. If they get it wrong, they drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, close your eyes. The person on your left will give you a secret drink. If you can correctly guess what it is, they must drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, count to 10 in a non-English language. If you can't, drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Everyone flex one arm and drink {number} with the other.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, do 10 pushups. If you can't, drink {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Everyone try to phone {player}. The first person to successfully get a call through to them can nominate {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, the next person to make eye contact with you must drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Spin a bottle. Whoever it lands on {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Whoever is wearing the tightest trousers {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "The hairiest player {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Ladies, drink for your bra cup size (A = 1 drink, B = 2, etc).",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "The most fancy/formal-dressed person {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, quote a movie. If {player} can't guess the movie, they must drink {number} drinks. If they can, you drink instead.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, drum a beat on the table. If {player} can't repeat the beat, they must drink {number} drinks. If they can, you drink instead.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, pick three adjecties about the person to your right, then both of you drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, choose another player. Everyone except you and that player must drink (number) drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Everyone drink for every letter in your name.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, everyone with the same drink as you must drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "Lads, be honest. Drink for 1 second for every inch you have.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, insult the player in front of you then both of you drink {number}.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, say 5 words starting with 'T' in 5 seconds or drink {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, go round the group and say everyone's full names (with or without middle names). If you can't do it, do a shot.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, tell everyone your favourite hobby then drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player} and {player}, tell everyone your favourite movie. The rest of the group votes which is worse. The person with the worse movie drinks {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "{player}, slap {player}'s butt. No drinking, just slap.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "The player showing the most skin {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "The player showing the most skin {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "If you've taken a picture tonight, you {giveortake} {number} drinks.",
   },
 ];
 
@@ -584,6 +1069,22 @@ export const categoryQuestions: Question[] = [
   {
     type: QuestionType.Categories,
     startString: "Synonyms for the word 'penis'",
+  },
+  {
+    type: QuestionType.Categories,
+    startString: "{player}'s choice!",
+  },
+  {
+    type: QuestionType.Categories,
+    startString: "{player}'s choice!",
+  },
+  {
+    type: QuestionType.Categories,
+    startString: "{player}'s choice!",
+  },
+  {
+    type: QuestionType.Categories,
+    startString: "{player}'s choice!",
   },
   {
     type: QuestionType.Categories,
