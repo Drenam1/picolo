@@ -327,6 +327,193 @@ export const standardQuestions: Question[] = [
     type: QuestionType.Standard,
     startString: "Everyone drink {number} from the cup of your choosing.",
   },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player} pass an ice cube from your mouth to {player}'s mouth or drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player} choose a part of your body. The first person to touch it can give out a shot.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player} give a dare to {player}. If they do it they can give out {number} drinks. If they don't, they drink instead.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, what is a non sexual thing that turns you on? If everyone agrees, give out {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, who do you think gave/received head more recently, {player} or {player}. They can give out {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, who do you think believes they are better in bed, {player} or {player}. They must drink {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Vote for who has the bigger penis (or most Big Dick Energy) out of {player} and {player}. The loser must take a shots.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player} choose a player to take off a item of clothing. The prude must drink {number} if they refuse.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Vote for who is the biggest clout chaser. The attention seeker {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Vote for who is most likely to tell a joke that doesn't land. The jokester {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "All players pass their drinks to the person to their right. {player} take a penalty drink before handing yours over.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "{player} and {player} take a shot together.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player} who likes foreplay more, {player} or {player}. They {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player} who do you think has been broken up with more, {player} or {player}. They {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "If you love anal, you {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Drink {number} times if you've ever had sex with another player.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player} and {player}, demonstrate a sex position. The first person to yell the name gives {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player} and {player}, swap shirts. Both drink {number} times if either player refuses.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Go round the room and say how long it's been since you last had sex. The person with the longest dry spell {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString: "If you like to be dommed, drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "If you have any piercings besides ears, you {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Vote for most likely to get in a fight. Chuck Norris {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Who has ripped their pants most recently? That person {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, are you a vegetarian? If you are, non-vege's drink {number} times. If no, vegetarians drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Everyone, ever been in a love triangle? If so drink 3 times. How about a love square? If so drink 4 times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "If you've ever been in a relationship with someone in this room, you {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, who do you think is the most likely to have a mid-life crisis? They {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, who do you think is the most likely to be a sugar baby? They {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, who do you think is the most likely to be a sugar daddy? They {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Vote for who is most likely to go after a MILF/DILF. That person must drink {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Anyone who has slept with someone in a relationship {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player}, describe a problem of yours and the others take a moment to describe how they'd fix it. Best (or funniest) solution voted by you doesn't drink, everyone else drinks {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Everyone say something they like about {player}. They must drink in their own honor.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Everyone decides on a topic. {player} must go on a 30 second rant about this topic. If they can't fill 30 seconds, they must drink {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "{player} make a pose. The next person must make your pose, then their own. Continue around the circle, adding an additional pose per person. The first person to mess up drinks {number} times.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Anyone who has spent more than £300 in a single night out {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Anyone who has spent more than £300 in a single night out {giveortake} {number} drinks.",
+  },
+  {
+    type: QuestionType.Standard,
+    startString:
+      "Anyone who has been catfished {giveortake} {number} drinks.",
+  },
 ];
 
 export const categoryQuestions: Question[] = [
@@ -407,6 +594,11 @@ export const categoryQuestions: Question[] = [
 export const ruleQuestions: Question[] = [
   {
     type: QuestionType.Rule,
+    startString: "{player} make a rule.",
+    endString: "The custom rule is no longer in effect.",
+  },
+  {
+    type: QuestionType.Rule,
     startString: "You must drink with your bad hand.",
     endString: "You may drink with whatever hand you like.",
   },
@@ -454,6 +646,12 @@ export const ruleQuestions: Question[] = [
     startString:
       "{player} is now snake eyes. If you make eye contact with them, you must drink.",
     endString: "Your eyes have returned to normal.",
+  },
+  {
+    type: QuestionType.Rule,
+    startString:
+      "{player}, choose another player. When you should drink, they must drink instead. If they must drink, you must drink instead",
+    endString: "Your drinking buddy has been released.",
   },
 ];
 
@@ -883,7 +1081,7 @@ export const umActuallyQuestions: Question[] = [
   {
     type: QuestionType.UmActually,
     startString: `In the *Witcher* series Ciri, aka The Lady of Time and Space, has inherited her mother Yennefer's eyes and talent for magic, and her father Geralt's sword skills and silver hair.`,
-    endString: `Ciri is adopted, not Geralt and Yennefer's biological daughter.`,
+    endString: `Ciri is adopted, not Geralt and Yennefer's biological daughter, so she didn't 'inherit' anything from them.`,
     topics: [Topic.TV_SHOWS, Topic.BOOKS],
   },
   {
