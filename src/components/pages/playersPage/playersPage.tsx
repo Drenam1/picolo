@@ -56,6 +56,7 @@ const PlayersPage: React.FunctionComponent<PlayersPageProps> = ({
       {players.filter((player) => !!player).length > 1 && (
         <button
           type="button"
+          disabled={enabledCardTypes.length === 0}
           onClick={() => {
             // Here you can implement the logic to start the game
             console.log("Starting game with players:", players);
@@ -71,6 +72,20 @@ const PlayersPage: React.FunctionComponent<PlayersPageProps> = ({
       )}
       <h2>Select Desired Card Types</h2>
       <div className="card-types">
+        <label>
+          <input
+            type="checkbox"
+            checked={enabledCardTypes.includes("Standard")}
+            onChange={(e) => {
+              const newCardTypes = e.target.checked
+                ? [...enabledCardTypes, "Standard"]
+                : enabledCardTypes.filter((type) => type !== "Standard");
+              setEnabledCardTypes(newCardTypes);
+            }}
+          />
+          {""}
+          Um, Actually
+        </label>
         <label>
           <input
             type="checkbox"
